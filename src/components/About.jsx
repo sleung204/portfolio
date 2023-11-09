@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const About = ({ restBase }) => {
-  const restPath = restBase + "pages/13";
+  const restPath = restBase + "pages/13?_embed?&1=2";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -26,7 +26,11 @@ const About = ({ restBase }) => {
           <h1>{restData.title.rendered}</h1>
           <div
             className="entry-content"
-            dangerouslySetInnerHTML={{ __html: restData.acf.about_info }}
+            dangerouslySetInnerHTML={{ __html: restData.content?.rendered }}
+          ></div>
+          <div
+            className="skills"
+            dangerouslySetInnerHTML={{ __html: restData.acf?.skills }}
           ></div>
         </article>
       ) : (

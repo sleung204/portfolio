@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Works from "./components/Works";
 
 function App() {
@@ -57,9 +56,6 @@ function App() {
               <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
-            <li>
               <NavLink to="/works">Works</NavLink>
             </li>
           </ul>
@@ -69,8 +65,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home restBase={restBase} />} />
           <Route path="/about" element={<About restBase={restBase} />} />
-
-          <Route path="/contact" element={<Contact restBase={restBase} />} />
           <Route
             path="/works"
             element={
