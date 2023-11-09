@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Loading from "./Loading";
 
 const About = ({ restBase }) => {
   const restPath = restBase + "pages/13";
@@ -27,11 +26,11 @@ const About = ({ restBase }) => {
           <h1>{restData.title.rendered}</h1>
           <div
             className="entry-content"
-            dangerouslySetInnerHTML={{ __html: restData.content.rendered }}
+            dangerouslySetInnerHTML={{ __html: restData.acf.about_info }}
           ></div>
         </article>
       ) : (
-        <Loading />
+        <>Meh</>
       )}
     </>
   );
