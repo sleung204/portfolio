@@ -52,9 +52,7 @@ const Home = ({ restBase }) => {
             </ul>
           </section>
         </article>
-      ) : (
-        <>Meh</>
-      )}
+      ) : null}
     </>
   );
 };

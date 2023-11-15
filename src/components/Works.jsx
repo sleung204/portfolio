@@ -19,7 +19,7 @@ const Works = ({ restBase }) => {
     fetchData();
   }, [restPath]);
 
-  return <>{isLoaded ? <>Works</> : <>Meh</>}</>;
+  return <>{isLoaded ? <>Works</> : null}</>;
 };
 
 export default Works;
