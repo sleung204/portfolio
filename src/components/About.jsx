@@ -33,9 +33,7 @@ const About = ({ restBase }) => {
             dangerouslySetInnerHTML={{ __html: restData.acf?.skills }}
           ></div>
         </article>
-      ) : (
-        <>Meh</>
-      )}
+      ) : null}
     </>
   );
 };
