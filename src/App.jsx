@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Works from "./components/Works";
+import SingleWork from "./components/SingleWork";
 
 function App() {
   const restBase = "https://sallyleungdev.com/portfolio/wp-json/wp/v2/";
@@ -69,6 +70,12 @@ function App() {
             path="/works"
             element={
               <Works restBase={restBase} featuredImage={featuredImage} />
+            }
+          />
+          <Route
+            path="/works/:slug"
+            element={
+              <SingleWork restBase={restBase} featuredImage={featuredImage} />
             }
           />
         </Routes>

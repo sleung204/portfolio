@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import Thumbnail from "./Thumbnail";
 
-const Works = ({ restBase, featuredImage }) => {
+const SingleWork = ({ restBase, featuredImage }) => {
   const restPath = restBase + "pages/13";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
@@ -20,13 +19,7 @@ const Works = ({ restBase, featuredImage }) => {
     fetchData();
   }, [restPath]);
 
-  return (
-    <>
-      {isLoaded ? (
-        <Thumbnail restBase={restBase} featuredImage={featuredImage} />
-      ) : null}
-    </>
-  );
+  return <>{isLoaded ? <Thumbnail /> : null}</>;
 };
 
-export default Works;
+export default SingleWork;
