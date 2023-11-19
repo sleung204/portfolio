@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Home = ({ restBase }) => {
-  const restPath = restBase + "pages/8";
+  const restPath = restBase + "pages/8?_embed?&1=2";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -33,6 +33,15 @@ const Home = ({ restBase }) => {
               rel="noopener noreferrer"
             >
               {restData.acf.view_works}
+            </a>
+
+            <a
+              href={restData.acf.about_me_link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {restData.acf.about_me}
+              About Me
             </a>
           </section>
           <section>
