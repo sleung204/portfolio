@@ -28,12 +28,29 @@ const About = ({ restBase }) => {
             className="entry-content"
             dangerouslySetInnerHTML={{ __html: restData.content?.rendered }}
           ></div>
+          {[1, 2, 3, 4].map((index) => {
+            const fieldName = `enjoyable_thing_${index}`;
+            const imageData = restData.acf?.[fieldName];
+
+            return (
+              imageData && (
+                <div key={index}>
+                  <img
+                    src={imageData.url}
+                    alt={imageData.alt || `Image ${index}`}
+                  />
+                </div>
+              )
+            );
+          })}
           <div
             className="skills"
             dangerouslySetInnerHTML={{ __html: restData.acf?.skills }}
           ></div>
         </article>
-      ) : null}
+      ) : (
+        <p>Loading...</p>
+      )}
     </>
   );
 };

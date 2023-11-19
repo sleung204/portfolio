@@ -81,17 +81,7 @@ function App() {
         </Routes>
       </main>
       <footer>
-        <p className="copyright">
-          Created by{" "}
-          <a
-            href="https://sallyleungdev.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sally Leung
-          </a>
-          .
-        </p>
+        <p className="copyright">© 2023 Sally Leung</p>
       </footer>
     </Router>
   );
