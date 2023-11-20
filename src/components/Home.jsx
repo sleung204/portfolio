@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home = ({ restBase }) => {
   const restPath = restBase + "pages/8?_embed?&1=2";
@@ -27,22 +28,13 @@ const Home = ({ restBase }) => {
           <section>
             <h2>{restData.acf.info}</h2>
             <p>{restData.acf.quote}</p>
-            <a
-              href={restData.acf.view_works_link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {restData.acf.view_works}
-            </a>
 
-            <a
-              href={restData.acf.about_me_link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {restData.acf.about_me}
+            <Link className="cta" to="/works">
+              View Works
+            </Link>
+            <Link className="cta" to="/about">
               About Me
-            </a>
+            </Link>
           </section>
           <section>
             <h2>Social Media</h2>
