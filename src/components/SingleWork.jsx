@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-const SingleWork = ({ restBase, featuredImage }) => {
-  const restPath = restBase + "pages/13";
+const SingleWork = ({ restBase }) => {
+  const { slug } = useParams();
+  const restPath = restBase + `posts/?slug=${slug}&_embed`;
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -19,7 +21,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
     fetchData();
   }, [restPath]);
 
-  return <>{isLoaded ? <Thumbnail /> : null}</>;
+  return <>{isLoaded ? "test" : null}</>;
 };
 
 export default SingleWork;

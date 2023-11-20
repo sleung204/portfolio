@@ -74,9 +74,7 @@ function App() {
           />
           <Route
             path="/works/:slug"
-            element={
-              <SingleWork restBase={restBase} featuredImage={featuredImage} />
-            }
+            element={<SingleWork restBase={restBase} />}
           />
         </Routes>
       </main>

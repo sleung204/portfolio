@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const About = ({ restBase }) => {
-  const restPath = restBase + "pages/13?_embed?&1=2";
+  const restPath = restBase + "pages/13?_embed&acf_format=standard&1=2";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -36,17 +36,20 @@ const About = ({ restBase }) => {
               imageData && (
                 <div key={index}>
                   <img
-                    src={imageData.url}
+                    src={imageData}
                     alt={imageData.alt || `Image ${index}`}
                   />
                 </div>
               )
             );
           })}
-          <div
-            className="skills"
-            dangerouslySetInnerHTML={{ __html: restData.acf?.skills }}
-          ></div>
+          <div className="skills">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: restData.acf?.skills_development,
+              }}
+            ></div>
+          </div>{" "}
         </article>
       ) : (
         <p>Loading...</p>
