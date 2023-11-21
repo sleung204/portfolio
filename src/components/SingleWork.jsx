@@ -21,7 +21,21 @@ const SingleWork = ({ restBase }) => {
     fetchData();
   }, [restPath]);
 
-  return <>{isLoaded ? "test" : null}</>;
+  return (
+    <>
+      {isLoaded ? (
+        <>
+          <article id={`post-${restData.id}`}>
+            <h1>{restData.title.rendered}</h1>
+            <h2>{restData.acf.overview_heading}</h2>
+            <p>{restData.acf.overview_body}</p>
+          </article>
+        </>
+      ) : (
+        <>Loading</>
+      )}
+    </>
+  );
 };
 
 export default SingleWork;
