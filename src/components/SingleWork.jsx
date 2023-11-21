@@ -40,11 +40,9 @@ const SingleWork = ({ restBase }) => {
             ))}
             {restData.acf.project_details.map((project_details) => (
               <>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: restData.acf?.project_details,
-                  }}
-                ></div>
+                <p
+                  dangerouslySetInnerHTML={{ __html: project_details.details }}
+                ></p>
               </>
             ))}
           </article>
