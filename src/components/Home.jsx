@@ -23,7 +23,7 @@ const Home = ({ restBase }) => {
   return (
     <>
       {isLoaded ? (
-        <article id={`post-${restData.id}`}>
+        <article className="wrapper" id={`post-${restData.id}`}>
           <h1>{restData.title.rendered}</h1>
           <section>
             <h2>{restData.acf.info}</h2>

@@ -22,6 +22,7 @@
 
 /* Typography
 --------------------------------------------- */
+
 body {
 }
 
@@ -71,9 +72,9 @@ a:active {
 }
 
 .cta {
-  background-color: #fffbf0;
-  border: none;
-  color: #2f2723;
+  background-color: #d0d8e1;
+  border: thick double #32a1ce;
+  color: #2e2623;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -95,6 +96,9 @@ a:active {
 
 /* Main
 --------------------------------------------- */
-
+.wrapper {
+  background-color: #d0d8e1;
+  text-align: left;
+}
 /* Footer
 --------------------------------------------- */
