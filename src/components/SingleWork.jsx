@@ -33,14 +33,16 @@ const SingleWork = ({ restBase }) => {
             <p>{restData.acf.roles_body}</p>
             <h2>{restData.acf.toolkit_heading}</h2>
             <p>{restData.acf.toolkit_body}</p>
-            {restData.acf.link.map((external_link) => (
-              <>
-                <a href={external_link.external_link}>View PDF Report</a>
-              </>
-            ))}
-            {restData.acf.project_details.map((project_details) => (
+            {restData.acf.link &&
+              restData.acf.link.map((external_link, i) => (
+                <a key={external_link[i]} href={external_link.external_link}>
+                  View PDF Report
+                </a>
+              ))}
+            {restData.acf.project_details.map((project_details, i) => (
               <>
                 <p
+                  key={project_details[i]}
                   dangerouslySetInnerHTML={{ __html: project_details.details }}
                 ></p>
               </>
