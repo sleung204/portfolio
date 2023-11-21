@@ -27,7 +27,7 @@ const About = ({ restBase }) => {
           <div
             className="entry-content"
             dangerouslySetInnerHTML={{ __html: restData.content?.rendered }}
-          ></div>
+          />
           {[1, 2, 3, 4].map((index) => {
             const fieldName = `enjoyable_thing_${index}`;
             const imageData = restData.acf?.[fieldName];
@@ -43,13 +43,21 @@ const About = ({ restBase }) => {
               )
             );
           })}
+
           <div className="skills">
             <div
               dangerouslySetInnerHTML={{
                 __html: restData.acf?.skills_development,
               }}
-            ></div>
-          </div>{" "}
+            />
+            </div>
+             <div className="skills">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: restData.acf?.skills_design,
+              }}
+            />
+          </div>
         </article>
       ) : (
         <p>Loading...</p>
