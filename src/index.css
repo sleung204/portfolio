@@ -145,3 +145,55 @@ a:active {
 }
 /* Footer
 --------------------------------------------- */
+/* Add this CSS to your stylesheets or in a style tag in your JSX */
+
+.social-media {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 10px;
+  z-index: 999; /* Set a value to ensure the footer is above other elements */
+}
+
+.social-media h2 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox to create a column layout */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.social-media li {
+  margin: 0;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 10px; /* Add spacing between each social media link */
+}
+
+.social-media a:hover {
+  text-decoration: underline;
+}
+
+/* Add this CSS to your stylesheets or in a style tag in your JSX */
+
+.copyright-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  color: #2e2623;
+  z-index: 999; /* Set a value to ensure the footer is above other elements */
+}
+
+

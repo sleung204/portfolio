@@ -6,6 +6,7 @@ import About from "./components/About";
 import Works from "./components/Works";
 import SingleWork from "./components/SingleWork";
 import Footer from "./components/Footer";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,

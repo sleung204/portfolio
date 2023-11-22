@@ -22,6 +22,8 @@ const Footer = ({ restBase }) => {
     <>
       {isLoaded && (
         <>
+          
+          <footer className="social-media">
           <section>
             <h2>Social Media</h2>
             <ul>
@@ -41,8 +43,9 @@ const Footer = ({ restBase }) => {
                 </li>
               ))}
             </ul>
-          </section>
-          <footer>
+            </section>
+            </footer>
+            <footer className="copyright-footer">
             <p className="copyright">© 2023 Sally Leung</p>
           </footer>
         </>
