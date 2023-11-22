@@ -5,7 +5,15 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Works from "./components/Works";
 import SingleWork from "./components/SingleWork";
-
+import Footer from "./components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHouse,
+  faCode,
+  faEnvelope,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 function App() {
   const restBase = "https://sallyleungdev.com/portfolio/wp-json/wp/v2/";
 
@@ -50,14 +58,21 @@ function App() {
           <ul>
             <li>
               <NavLink to="/" end>
-                Home
+                <FontAwesomeIcon icon={faHouse} />
+                <title>Home</title>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about">
+                <FontAwesomeIcon icon={faUser} />
+                <title>About</title>
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/works">Works</NavLink>
+              <NavLink to="/works">
+                <FontAwesomeIcon icon={faCode} />
+                <title>Works</title>
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -78,9 +93,9 @@ function App() {
           />
         </Routes>
       </main>
-      <footer>
-        <p className="copyright">© 2023 Sally Leung</p>
-      </footer>
+      <Footer restBase={restBase}/>
+        
+      
     </Router>
   );
 }

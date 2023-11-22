@@ -36,22 +36,7 @@ const Home = ({ restBase }) => {
               About Me
             </Link>
           </section>
-          <section>
-            <h2>Social Media</h2>
-            <ul>
-              {restData.acf.social_media.map((socialMediaItem, index) => (
-                <li key={index}>
-                  <a
-                    href={socialMediaItem.social_media_link.url}
-                    target={socialMediaItem.social_media_link.target}
-                    rel="noopener noreferrer"
-                  >
-                    {socialMediaItem.social_media_text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
+          
         </article>
       ) : null}
     </>
