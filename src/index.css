@@ -145,6 +145,20 @@ body.home-page {
   padding: 10px;
 }
 
+.acf-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.acf-image {
+  max-width: 100%; /* Make sure the image doesn't exceed its container */
+  height: auto;    /* Maintain the image's aspect ratio */
+  width: 100px;    /* Set the desired width for the thumbnail */
+  margin: 0 10px;  /* Adjust the spacing between images */
+}
+
+
 /* Footer
 --------------------------------------------- */
 
@@ -186,8 +200,6 @@ body.home-page {
 .social-media a:hover {
   text-decoration: underline;
 }
-
-
 
 .copyright-footer {
   position: fixed;

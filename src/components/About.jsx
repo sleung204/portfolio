@@ -28,30 +28,32 @@ const About = ({ restBase }) => {
             className="entry-content"
             dangerouslySetInnerHTML={{ __html: restData.content?.rendered }}
           />
-          {[1, 2, 3, 4].map((index) => {
-            const fieldName = `enjoyable_thing_${index}`;
-            const imageData = restData.acf?.[fieldName];
+          <div className="acf-image-container">
+            {[1, 2, 3, 4].map((index) => {
+              const fieldName = `enjoyable_thing_${index}`;
+              const imageData = restData.acf?.[fieldName];
 
-            return (
-              imageData && (
-                <div key={index}>
-                  <img
-                    src={imageData}
-                    alt={imageData.alt || `Image ${index}`}
-                  />
-                </div>
-              )
-            );
-          })}
-
+              return (
+                imageData && (
+                  <div key={index}>
+                    <img
+                      className="acf-image"
+                      src={imageData}
+                      alt={imageData.alt || `Image ${index}`}
+                    />
+                  </div>
+                )
+              );
+            })}
+          </div>
           <div className="skills">
             <div
               dangerouslySetInnerHTML={{
                 __html: restData.acf?.skills_development,
               }}
             />
-            </div>
-             <div className="skills">
+          </div>
+          <div className="skills">
             <div
               dangerouslySetInnerHTML={{
                 __html: restData.acf?.skills_design,
