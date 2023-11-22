@@ -23,53 +23,40 @@
 /* Typography
 --------------------------------------------- */
 
-body {
-}
+body {}
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-}
+h6 {}
 
-p {
-}
+p {}
 
 /* Elements
 --------------------------------------------- */
-ul {
-}
+ul {}
 
-ol {
-}
+ol {}
 
-dl {
-}
+dl {}
 
-figure {
-}
+figure {}
 
-table {
-}
+table {}
 
 /* Links
 --------------------------------------------- */
-a {
-}
+a {}
 
-a:visited {
-}
+a:visited {}
 
-a:hover {
-}
+a:hover {}
 
-a:focus {
-}
+a:focus {}
 
-a:active {
-}
+a:active {}
 
 .cta {
   background-color: #d0d8e1;
@@ -80,7 +67,8 @@ a:active {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: auto 1rem;
+  margin: 5rem auto;
+  /* Adjust the top margin as needed */
 }
 
 /*--------------------------------------------------------------
@@ -92,7 +80,7 @@ a:active {
   position: fixed;
   bottom: 0;
   width: 20%;
-  border-top-left-radius: 20px; 
+  border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -120,13 +108,13 @@ a:active {
 
 .site-navigation a:hover {
   background-color: rgba(68, 68, 68, 0.8);
-  border-top-left-radius: 20px; 
+  border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .site-navigation svg {
   margin-right: 5px;
-  
+
 }
 
 
@@ -139,36 +127,50 @@ a:active {
 
 /* Main
 --------------------------------------------- */
+body {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+body.home-page {
+  overflow: hidden;
+}
+
 .wrapper {
   background-color: #8FA3AA;
   text-align: left;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 10px;
 }
+
 /* Footer
 --------------------------------------------- */
-/* Add this CSS to your stylesheets or in a style tag in your JSX */
+
 
 .social-media {
   position: fixed;
   left: 0;
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
   width: auto;
   padding: 10px;
-  z-index: 999; /* Set a value to ensure the footer is above other elements */
+  z-index: 999;
 }
 
 .social-media h2 {
   color: #fff;
   font-size: 16px;
-  margin-bottom: 10px; /* Add spacing below the heading */
+  margin-bottom: 10px;
 }
 
 .social-media ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Use flexbox to create a column layout */
-  flex-direction: column; /* Stack items vertically */
+  display: flex;
+  flex-direction: column;
 }
 
 .social-media li {
@@ -178,14 +180,14 @@ a:active {
 .social-media a {
   text-decoration: none;
   color: #fff;
-  margin-bottom: 10px; /* Add spacing between each social media link */
+  margin-bottom: 10px;
 }
 
 .social-media a:hover {
   text-decoration: underline;
 }
 
-/* Add this CSS to your stylesheets or in a style tag in your JSX */
+
 
 .copyright-footer {
   position: fixed;
@@ -193,7 +195,5 @@ a:active {
   left: 0;
   padding: 10px;
   color: #2e2623;
-  z-index: 999; /* Set a value to ensure the footer is above other elements */
+  z-index: 999;
 }
-
-

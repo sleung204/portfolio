@@ -25,7 +25,7 @@ const SingleWork = ({ restBase }) => {
     <>
       {isLoaded ? (
         <>
-          <article id={`post-${restData.id}`}>
+          <article className="wrapper" id={`post-${restData.id}`}>
             <h1>{restData.title.rendered}</h1>
             <h2>{restData.acf.overview_heading}</h2>
             <p>{restData.acf.overview_body}</p>

@@ -18,6 +18,10 @@ const Home = ({ restBase }) => {
       }
     };
     fetchData();
+    document.body.classList.add("home-page");
+    return () => {
+      document.body.classList.remove("home-page");
+    };
   }, [restPath]);
 
   return (
@@ -36,7 +40,6 @@ const Home = ({ restBase }) => {
               About Me
             </Link>
           </section>
-          
         </article>
       ) : null}
     </>
