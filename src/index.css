@@ -41,7 +41,7 @@ p {
 }
 
 .quote {
-  font-size:'Poppins', sans-serif;
+  font-size: 'Poppins', sans-serif;
   font-size: 19px;
   font-weight: 900;
   position: relative;
@@ -60,9 +60,7 @@ figure {}
 
 table {}
 
-.thumbnail-wrapper {
-
-}
+.thumbnail-wrapper {}
 
 .featured-image {
   max-width: 25%;
@@ -92,7 +90,7 @@ a:active {}
   display: inline-block;
   font-size: 16px;
   margin: 5rem auto;
-  /* Adjust the top margin as needed */
+
 }
 
 /*--------------------------------------------------------------
@@ -170,7 +168,6 @@ body.home-page {
   margin: 5px;
 }
 
-
 .skills ul {
   padding: 0;
   text-align: left;
@@ -181,9 +178,29 @@ body.home-page {
 }
 
 
-.skills > ul {
+.skills>ul {
   margin: 10px 0;
 }
+
+  .acf-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+  }
+
+  .acf-image-container div {
+    width: calc(50% - 20px);
+    margin: 10px; 
+  }
+
+  .acf-image {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
 
 /* Desktop Styles */
 @media (min-width:48em) {
@@ -193,34 +210,22 @@ body.home-page {
     justify-content: center;
     align-items: flex-start;
   }
-  .skills > ul {
+
+  .skills>ul {
     width: 100%;
     margin: 10px 15px 10px 10px;
   }
 
-.skills {
-  flex-direction: column;
-  align-items: center;
-}
-}
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+  .acf-image-container div {
+    width: calc(25% - 20px);
+    margin: 10px; 
+  }
 
-.acf-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-
-.acf-image {
-  max-width: 100%;
-  /* Make sure the image doesn't exceed its container */
-  height: auto;
-  /* Maintain the image's aspect ratio */
-  width: 200px;
-  /* Set the desired width for the thumbnail */
-  margin: 0 10px;
-  /* Adjust the spacing between images */
-}
-
 
 /* Footer
 --------------------------------------------- */
