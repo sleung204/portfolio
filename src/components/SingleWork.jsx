@@ -34,9 +34,9 @@ const SingleWork = ({ restBase }) => {
             <h2>{restData.acf.toolkit_heading}</h2>
             <p>{restData.acf.toolkit_body}</p>
             {restData.acf.link &&
-              restData.acf.link.map((external_link, i) => (
-                <a key={external_link[i]} href={external_link.external_link}>
-                  View PDF Report
+              restData.acf.link.map((link_single, i) => (
+                <a key={link_single[i]} href={link_single.external_link}>
+                  {link_single.link_title}
                 </a>
               ))}
             {restData.acf.project_details.map((project_details, i) => (

@@ -46,15 +46,15 @@ const About = ({ restBase }) => {
               );
             })}
           </div>
-          <div className="skills">
-            <div
+          <div className="skills-container">
+            <div className="skills"
               dangerouslySetInnerHTML={{
                 __html: restData.acf?.skills_development,
               }}
             />
-          </div>
-          <div className="skills">
-            <div
+          
+          
+            <div className="skills"
               dangerouslySetInnerHTML={{
                 __html: restData.acf?.skills_design,
               }}
