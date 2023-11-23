@@ -31,7 +31,7 @@ const Home = ({ restBase }) => {
           <h1>{restData.title.rendered}</h1>
           <section>
             <h2>{restData.acf.info}</h2>
-            <p>{restData.acf.quote}</p>
+            <p className="quote">{restData.acf.quote}</p>
 
             <Link className="cta" to="/works">
               View Works

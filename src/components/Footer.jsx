@@ -25,7 +25,6 @@ const Footer = ({ restBase }) => {
           
           <footer className="social-media">
           <section>
-            <h2>Social Media</h2>
             <ul>
               {restData.acf.social_media.map((socialMediaItem, index) => (
                 <li key={index}>
