@@ -50,6 +50,16 @@ figure {}
 
 table {}
 
+.thumbnail-wrapper {
+
+}
+
+.featured-image {
+  max-width: 25%;
+  height: auto;
+  border-radius: 5px;
+}
+
 /* Links
 --------------------------------------------- */
 a {}
@@ -165,18 +175,28 @@ body.home-page {
   margin-bottom: 5px;
 }
 
+.skills > ul {
+  width: 100%;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
 
+/* Add media queries for responsiveness */
 @media (max-width: 768px) {
   .skills {
     flex-direction: column;
     align-items: center;
+  }
 
-    .skills>ul {
-      width: 100%;
-    }
+  .skills > ul {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-left: 0;
+    margin-right: 0;
   }
 }
-
 
 .acf-image-container {
   display: flex;
