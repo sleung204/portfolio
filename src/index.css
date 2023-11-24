@@ -89,7 +89,9 @@ a:active {}
 }
 
 
-.cta, .project-link {
+.cta,
+.project-link,
+.project-cta {
   background-color: #d0d8e1;
   border: thick double #32a1ce;
   color: #2e2623;
@@ -98,16 +100,21 @@ a:active {}
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 5rem 16px 5rem 0;
+  width: fit-content;
 }
 
-.cta+.cta {
+.cta + .cta {
   margin-left: 16px;
 }
 
 .project-link {
   margin: 2rem 16px 2rem 0;
 }
+
+.project-cta {
+  margin: 4rem 16px 4rem 0;
+}
+
 
 /*--------------------------------------------------------------
 # Layout
@@ -278,7 +285,7 @@ body.home-page {
 
 /* Footer
 --------------------------------------------- */
-.social-media {
+.social-icons {
   position: fixed;
   left: 0;
   top: 70%;
@@ -288,7 +295,7 @@ body.home-page {
   z-index: 999;
 }
 
-.social-media ul {
+.social-icons ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -296,24 +303,27 @@ body.home-page {
   flex-direction: column;
 }
 
-.social-media li {
+.social-icons li {
   margin: 0;
 }
 
-.social-media a {
+.social-icons a {
   text-decoration: none;
   color: #fff;
   margin-bottom: 10px;
   background-color: #fff;
+  border-radius: 50%;
+  display: block;
 }
 
-.social-media a:hover {
+.social-icons a:hover {
   background-color: #D3C4D8;
 }
 
-.social-media a svg {
+.social-icons a svg {
   width: 40px;
   height: 40px;
+  vertical-align: middle;
 }
 
 .copyright-footer {

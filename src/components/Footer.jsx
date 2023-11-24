@@ -23,7 +23,8 @@ const Footer = ({ restBase }) => {
       {isLoaded && (
         <>
           
-          <footer className="social-media">
+          <footer className="social-icons">
+
           <section>
             <ul>
               {restData.acf.social_media.map((socialMediaItem, index) => (
