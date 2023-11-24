@@ -60,12 +60,6 @@ figure {}
 
 table {}
 
-.featured-image {
-  max-width: 25%;
-  height: auto;
-  border-radius: 5px;
-}
-
 /* Links
 --------------------------------------------- */
 a {
@@ -230,7 +224,7 @@ body.home-page {
 
 .thumbnail-wrapper {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
 }
 

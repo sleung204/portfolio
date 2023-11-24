@@ -25,9 +25,9 @@ const Thumbnail = ({ restBase, featuredImage }) => {
       {isLoaded ? (
         <>
           {restData.map((post) => (
-            <article key={post.id} id={`post-${post.id}`}>
+            <article className="thumbnail-wrapper" key={post.id} id={`post-${post.id}`}>
               {post.featured_media !== 0 && post._embedded && (
-                <figure className="thumbnail-wrapper">
+                <figure >
                   {post._embedded["wp:featuredmedia"] &&
                     post._embedded["wp:featuredmedia"][0].source_url && (
                       <img
