@@ -38,10 +38,14 @@ const Thumbnail = ({ restBase, featuredImage }) => {
                     )}
                 </figure>
               )}
-              <Link to={`/works/${post.slug}`}>
-                <h2>{post?.title?.rendered}</h2>
-              </Link>
+              <div className="content">
+              <h2>
+                <Link to={`/works/${post.slug}`}>
+                  {post?.title?.rendered}
+                </Link>
+              </h2>
               <div className="summary">{post.acf.summary}</div>
+            </div>
             </article>
           ))}
         </>

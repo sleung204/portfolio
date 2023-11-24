@@ -35,7 +35,11 @@ const SingleWork = ({ restBase }) => {
             <p>{restData.acf.toolkit_body}</p>
             {restData.acf.link &&
               restData.acf.link.map((link_single, i) => (
-                <a key={link_single[i]} href={link_single.external_link}>
+                <a
+                  key={link_single[i]}
+                  href={link_single.external_link}
+                  className="project-link"
+                >
                   {link_single.link_title}
                 </a>
               ))}
