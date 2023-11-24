@@ -70,11 +70,18 @@ table {}
 
 /* Links
 --------------------------------------------- */
-a {}
+a {
+  text-decoration: none;
+  color: #fff;
+}
 
-a:visited {}
+a:hover {
+  color: #8a4b87;
+}
 
-a:hover {}
+a:visited {
+  color: #346699;
+}
 
 a:focus {}
 
@@ -137,7 +144,7 @@ a:active {}
 }
 
 .site-navigation a:hover {
-  background-color: rgba(68, 68, 68, 0.8);
+  background-color: #32a1ce;
  
 }
 
@@ -267,6 +274,11 @@ body.home-page {
 
 .social-media a:hover {
   background-color: #D3C4D8;
+}
+
+.social-media a svg {
+  width: 40px;
+  height: 40px; 
 }
 
 .copyright-footer {

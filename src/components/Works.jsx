@@ -24,6 +24,7 @@ const Works = ({ restBase, featuredImage }) => {
     <>
       {isLoaded ? (
         <article className="wrapper" id={`post-${restData.id}`}>
+           <h2>{restData.title.rendered}</h2>
           <Thumbnail restBase={restBase} featuredImage={featuredImage} />
         </article>
       ) : null}
