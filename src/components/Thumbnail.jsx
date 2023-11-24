@@ -27,25 +27,27 @@ const Thumbnail = ({ restBase, featuredImage }) => {
           {restData.map((post) => (
             <article className="thumbnail-wrapper" key={post.id} id={`post-${post.id}`}>
               {post.featured_media !== 0 && post._embedded && (
-                <figure >
+                <figure>
                   {post._embedded["wp:featuredmedia"] &&
                     post._embedded["wp:featuredmedia"][0].source_url && (
-                      <img
-                        src={post._embedded["wp:featuredmedia"][0].source_url}
-                        alt="Thumbnail"
-                        className="featured-image"
-                      />
+                      <Link to={`/works/${post.slug}`}>
+                        <img
+                          src={post._embedded["wp:featuredmedia"][0].source_url}
+                          alt="Thumbnail"
+                          className="featured-image"
+                        />
+                      </Link>
                     )}
                 </figure>
               )}
               <div className="content">
-              <h2>
-                <Link to={`/works/${post.slug}`}>
-                  {post?.title?.rendered}
-                </Link>
-              </h2>
-              <div className="summary">{post.acf.summary}</div>
-            </div>
+                <h2>
+                  <Link to={`/works/${post.slug}`}>
+                    {post?.title?.rendered}
+                  </Link>
+                </h2>
+                <div className="summary">{post.acf.summary}</div>
+              </div>
             </article>
           ))}
         </>
