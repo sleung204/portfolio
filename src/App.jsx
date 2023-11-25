@@ -53,7 +53,6 @@ function App() {
     <Router>
       <header id="masthead" className="site-header">
         <div className="site-branding">
-          <p className="site-title">Portfolio</p>
         </div>
         <nav className="site-navigation">
           <ul>

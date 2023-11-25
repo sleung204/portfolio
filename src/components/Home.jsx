@@ -32,7 +32,6 @@ const Home = ({ restBase }) => {
           <section>
             <h2>{restData.acf.info}</h2>
             <p className="quote">{restData.acf.quote}</p>
-
             <Link className="cta" to="/works">
               View Works
             </Link>
