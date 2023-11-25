@@ -167,6 +167,12 @@ a:active {}
   margin-right: 5px;
 }
 
+/* Mobile Styles */
+@media (max-width:48em) {
+  .site-navigation {
+  padding:0 4rem;
+}
+}
 
 
 /*--------------------------------------------------------------
