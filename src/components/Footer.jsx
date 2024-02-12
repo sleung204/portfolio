@@ -46,7 +46,7 @@ const Footer = ({ restBase }) => {
             </section>
             </footer>
             <footer className="copyright-footer">
-            <p className="copyright">© 2023 Sally Leung</p>
+            <p className="copyright">© 2024 Sally Leung</p>
           </footer>
         </>
       )}
