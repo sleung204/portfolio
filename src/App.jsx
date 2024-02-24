@@ -11,10 +11,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
   faCode,
-  faEnvelope,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 function App() {
   const restBase = "https://sallyleungdev.com/portfolio/wp-json/wp/v2/";
 
